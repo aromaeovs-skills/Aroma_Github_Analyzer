@@ -1,0 +1,17 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: github-analyzer-api
+    url: http://github-analyzer-api:8000
+    routes:
+      - name: analyzer-api-routes
+        paths:
+          - /auth
+          - /github
+          - /billing
+          - /webhooks/razorpay
+          - /health
+          - /
+        strip_path: false
+        preserve_host: false
